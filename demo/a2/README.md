@@ -80,8 +80,6 @@ A namespace is simply an isolation mechanism to separate resources.
 
 In Kubernetes, the smallest deployable unit is Pod.  
 
-[TODO]: more resources on why there is Pod.
-
 All the containers exist within Pods, and a Pod hosts 1 or more closely related containers.  
 For this assignment's purpose, we assume there is only 1 container in each Pod, and the concepts of Pod and container are interchangeable.
 
@@ -220,11 +218,9 @@ In-cluster DNS does not solve it either as Pod DNS name will depend on its own n
 A way to do it is to set up a service object in `ClusterIP` type which will create a static IP within the cluster
 so that any Pod can access a set of Pods using a virtual IP.  
 > Note that Such IP is not real and pinging it **will not** do anything.  
-> [TODO] expand on kube-proxy if there is space.
 
 However, they **cannot** be reached from the network outside the cluster (e.g. our computer).
 
-[TODO] explain why cannot
 
 There are some ways to get service exposed to the public net such as AWS load balancer controller which creates public load balancer and proxies Service object directly.
 
@@ -271,7 +267,6 @@ ingress-nginx-controller   1/1     1            1           6m19s
 
 > As you can see, Ingress controllers live in a different namespace called "ingress-nginx" by design.
 
-[TODO] explain the architecture of this.
 
 ### Step 2: Create a Service for your Deployment
 
