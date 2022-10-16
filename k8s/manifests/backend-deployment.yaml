@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
         - name: backend
-          image: nginx:latest
+          image: reeyaan/dockerhub:otot-a1-nodeserver
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 8080
           resources:
             limits:
               cpu: 40m
