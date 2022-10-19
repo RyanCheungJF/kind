@@ -1,7 +1,7 @@
 echo "Starting Setup for A2..."
 
 echo "1. Create cluster:"
-kind create cluster --name kind-1 --config k8s/kind/cluster-config.yaml
+kind create cluster --name kind-1 --config kind/cluster-config.yaml
 kubectl cluster-info
 docker ps
 
